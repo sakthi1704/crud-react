@@ -75,7 +75,7 @@ class App extends Component {
 
     return (
       <div className ='form-container'>
-      <form >
+      <form>
       <Input
         placeholder="Add New Item"
         // value= {this.state.value}
@@ -91,6 +91,7 @@ class App extends Component {
             </Button> :  <Button  variant="contained" color="secondary" onClick={this.updatedItem} >
              Edit
           </Button>}
+    <ListComp />
         </form>
       </div>
     );

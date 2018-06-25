@@ -21,33 +21,16 @@ class ListComp extends Component {
     super(props);
   }
   render(){
-    const arrayItm =this.props.changeInputValue;
+    const arrayItm1 =[this.props.submitInputValue];
+    console.log(arrayItm1);
     return(
       <div>
-      // {this.props.changeInputValue}
-      <Table>
-    <TableBody>
-    {arrayItm.map((item, index) =>{
-          return (
-            <TableRow key={index}>
-              <TableCell numeric >
-              {item}
-               </TableCell>
-              <IconButton aria-label="Edit" onClick = { ()=>{
-                this.editItem(item, index)}
-              }>
-   <EditIcon />
-   </IconButton>
-      <IconButton aria-label="Delete" onClick ={() =>{
-        this.deleteItem(item,index)
-       }}>
-        <DeleteIcon />
-      </IconButton>
-            </TableRow>
-          );
-        })}
-      </TableBody>
-      </Table>
+<ul>
+{arrayItm1.map((item, i) =>{
+  <li> {item} </li>
+  console.log({item})
+ })}
+</ul>
         </div>
     );
   }
